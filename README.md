@@ -11,9 +11,9 @@
 
 ## 项目
 
-[数据结构与算法](./Data Structures and Algorithms)
+[数据结构与算法](https://github.com/amusi/coding-note/tree/master/Data%20Structures%20and%20Algorithms)
 
-[剑指Offer](./Coding Interviews)
+[剑指Offer](https://github.com/amusi/coding-note/tree/master/Coding%20Interviews)
 
 
 
