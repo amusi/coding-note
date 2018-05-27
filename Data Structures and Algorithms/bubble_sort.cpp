@@ -5,7 +5,6 @@
 * Reference: 
 *	http://en.wikipedia.org/wiki/Bubble_sort
 *	https://github.com/xtaci/algorithms/blob/master/include/bubble_sort.h
-*   https://www.zhihu.com/people/amusi1994/activities
 *
 * 冒泡排序说明：待完成
 *

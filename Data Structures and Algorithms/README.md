@@ -6,7 +6,9 @@
 
 
 
-- [冒泡排序（Bubble Sort）](bubb;e_sort.cpp)
+- [冒泡排序（Bubble Sort）](bubble_sort.cpp)
+
+
 
 
 
