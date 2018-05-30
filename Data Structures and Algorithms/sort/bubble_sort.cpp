@@ -5,8 +5,9 @@
 * Reference: 
 *	http://en.wikipedia.org/wiki/Bubble_sort
 *	https://github.com/xtaci/algorithms/blob/master/include/bubble_sort.h
+*   https://zhuanlan.zhihu.com/p/37077924
 *
-* 冒泡排序说明：待完成
+* 冒泡排序说明：比较相邻的两个元素，将值大的元素交换到右边（降序则相反）
 *
 */
 
