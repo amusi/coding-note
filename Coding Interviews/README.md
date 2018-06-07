@@ -2,11 +2,23 @@
 
 ## github
 
+### C/C++
+
 （官方完整版：C/C++版本）[**InterviewQuestions**](http://www.broadview.com.cn/23245)
 
 （官方非完整版：C/C++版本）**[ChineseCodingInterviewAppendix](https://github.com/zhedahht/ChineseCodingInterviewAppendix)**
 
+（C/C++版本）[CodingInterviews](https://github.com/gatieme/CodingInterviews)
+
+### Python
+
+[interactive-coding-challenges](https://github.com/donnemartin/interactive-coding-challenges)
+
+### JAVA
+
 （大神：JAVA版本）**[coding-interviews](https://github.com/Wang-Jun-Chao/coding-interviews)**
+
+（JAVA版本）[剑指offer题解](https://github.com/CyC2018/Interview-Notebook/blob/master/notes/%E5%89%91%E6%8C%87%20offer%20%E9%A2%98%E8%A7%A3.md)
 
 
 

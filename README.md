@@ -15,11 +15,13 @@
 
 [剑指Offer](https://github.com/amusi/coding-note/tree/master/Coding%20Interviews)
 
-
+[Leetcode](LeetCode/README.md)
 
 
 
 ## 参考资料
 
-https://github.com/jwasham/coding-interview-university
+[Interview-Notebook](https://github.com/CyC2018/Interview-Notebook): 含剑指Offer题解、Leetcode题解、算法等内容
+
+[coding-interview-univerity](https://github.com/jwasham/coding-interview-university): 含算法与数据结构、C++/ JAVA /Python面试经验等
 
