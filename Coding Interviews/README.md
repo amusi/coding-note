@@ -8,7 +8,7 @@
 
 ------
 
-- [x] **【面试题03：二维数组中的查找】**
+- [x] **【面试题03：二维数组中的查找】** [FindInPartiallySortedMatrix](03_FindInPartiallySortedMatrix/README.md)
 
 
 

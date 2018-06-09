@@ -30,7 +30,7 @@ def judge_inter_in_array(matrix, rows, cols, search_num):
 	row = rows-1
 	col = 0
 	
-	if rows==0 or col==0:
+	if rows==0 or cols==0:
 		return False
 	
 	while rows>=0 and col<cols:
@@ -51,4 +51,4 @@ if __name__ == '__main__':
 		[6, 8, 11, 15]
 	]
 	
-	print(judge_inter_in_array(matrix, 4, 4,10))
+	print(judge_inter_in_array(matrix, 4, 4, 11))
