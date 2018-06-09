@@ -65,33 +65,29 @@ public:
 [Python](FindInPartiallySortedMatrix.py)
 
 ```python
-def judge_inter_in_array(matrix, rows, cols, search_num):
-	''' 判断数组中是否含有该整数'''
-	row = rows-1
-	col = 0
-	
-	if rows==0 or cols==0:
-		return False
-	
-	while rows>=0 and col<cols:
-		if matrix[row][col] > search_num:
-			row = row-1
-		elif matrix[row][col] < search_num:
-			col = col+1
-		else:
-			return True
-			
-	return False
-
-if __name__ == '__main__':
-	matrix = [
-		[1, 2, 8, 9],
-		[2, 4, 9, 12],
-		[4, 7, 10, 13],
-		[6, 8, 11, 15]
-	]
-	
-	print(judge_inter_in_array(matrix, 4, 4, 11))
+# -*- coding:utf-8 -*-
+class Solution:
+    # array 二维列表
+    def Find(self, target, array):
+        # write code here
+        # 计算数组的行列
+        rows = len(array)    # 计算行数
+        cols = len(array[0]) # 计算列数
+        
+        if rows<=0 or cols<=0:
+            return False
+        
+        row = rows-1
+        col = 0
+        
+        while row >=0 and col <cols:
+            if array[row][col] < target:
+                col = col+1
+            elif array[row][col] > target:
+                row = row-1
+            else:
+                return True
+        return False
 ```
 
 
