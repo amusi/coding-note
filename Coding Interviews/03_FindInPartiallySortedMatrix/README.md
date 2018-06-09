@@ -9,7 +9,7 @@
 # 思路
 
 	二维数组matrix, 二维数组行数: rows，二维数组列数: cols, 待查询数值num
-	
+
 	1.先将二维数组转换成一维数组进行处理
 	2.定义判断初始值为左下角元素matrix[row][col]，其中row=rows-1, col=0
 	3.将二维数组的左下角元素matrix[row][col]（或者右上角元素）值与带查询num进行比较，
@@ -50,7 +50,39 @@ public:
 };
 ```
 
-Python
+
+
+[Python](FindInPartiallySortedMatrix.py)
+
+```python
+def judge_inter_in_array(matrix, rows, cols, search_num):
+	''' 判断数组中是否含有该整数'''
+	row = rows-1
+	col = 0
+	
+	if rows==0 or cols==0:
+		return False
+	
+	while rows>=0 and col<cols:
+		if matrix[row][col] > search_num:
+			row = row-1
+		elif matrix[row][col] < search_num:
+			col = col+1
+		else:
+			return True
+			
+	return False
+
+if __name__ == '__main__':
+	matrix = [
+		[1, 2, 8, 9],
+		[2, 4, 9, 12],
+		[4, 7, 10, 13],
+		[6, 8, 11, 15]
+	]
+	
+	print(judge_inter_in_array(matrix, 4, 4, 11))
+```
 
 
 
