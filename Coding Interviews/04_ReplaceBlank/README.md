@@ -32,9 +32,10 @@
 
 PS: Amusi在今年四月份腾讯实习面试的时候遇到了这题，当初的解法很垃圾，所以充分验证了刷题的重要性。
 
-举个栗子，如下图所示（图虽然有点丑，但应该能看懂，嘻嘻）
+举个栗子，如下图所示
 
-![FindInPartiallySortedMatrix.png](FindInPartiallySortedMatrix.png)
+- [ ] 待补充图示
+
 
 # 代码
 
