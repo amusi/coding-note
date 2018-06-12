@@ -14,7 +14,7 @@
 
 - [x] **【面试题04：替换空格】** [ReplaceBlank](04_ReplaceBlank/README.md)
 
-- [ ] **【面试题05：从尾到头打印链表】** PrintListInReversedOrder
+- [x] **【面试题05：从尾到头打印链表】** [PrintListInReversedOrder](05_PrintListInReversedOrder)
 
 - [ ] **【面试题06：重建二叉树】**
 
