@@ -1,4 +1,13 @@
 # coding=utf-8
+'''
+Copyright: Amusi
+Author:    Amusi
+Date:      2018-06-013
+
+题目描述
+输入一个链表，从尾到头打印链表每个节点的值。
+'''
+
 # Definition for singly-linked list.  
 # 节点类
 class ListNode():  
