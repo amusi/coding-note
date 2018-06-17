@@ -9,16 +9,20 @@
 此题考查**队列和栈**的知识点，个人觉得题目不难，但理解数据结构【队列】和【栈】反倒是一件困难的事情。
 
 <分析>：利用两个栈，实现两次进栈出栈（先入后出x2）即可实现队列（先入先出）。
+
 如1，2，3，4，5依次入栈A（此时top为5），出栈并入栈B为：5，4，3，2，1（此时top为1）。此时的栈B即相当于一个队列。
+
 入队：将元素进栈A
+
 出队：判断栈B是否为空，如果为空，则将栈A中所有元素pop，并push进栈B，栈B出栈；
-如果不为空，栈B直接出栈
+
+如果不为空，栈B直接出栈。
 
 
 
 # 代码
 
-[C++](ConstructBinaryTree.cpp)
+[C++](QueueWithTwoStacks.cpp)
 
 ```c++
 class Solution
@@ -58,7 +62,7 @@ private:
 };
 ```
 
-[Python](ConstructBinaryTree.py)
+[Python](QueueWithTwoStacks.py)
 
 ```python
 # -*- coding:utf-8 -*-
