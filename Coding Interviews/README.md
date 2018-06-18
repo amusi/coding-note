@@ -20,7 +20,7 @@
 
 - [x] **【面试题07：用两个栈实现队列】** [QueueWithTwoStacks](07_QueueWithTwoStacks)
 
-- [x] **【面试题08：旋转数组的最小数字】** [08_MinNumberInRotatedArray]()
+- [x] **【面试题08：旋转数组的最小数字】** [MinNumberInRotatedArray](08_MinNumberInRotatedArray)
 
 - [ ] **【面试题09：斐波那契数列】**
 
