@@ -1,27 +1,29 @@
 '''
 Copyright: Amusi
 Author:    Amusi
-Date:      2018-06-14
+Date:      2018-06-17
 
 题目描述
-输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。
+用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。
 
 
 '''
+
 # -*- coding:utf-8 -*-
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+# <分析>：利用两个栈，实现两次进栈出栈（先入后出x2）即可实现队列（先入先出）。
 class Solution:
-    # 返回构造的TreeNode根节点
-    def reConstructBinaryTree(self, pre, tin):
+    def __init__(self):
+        self.stack1 = []    # 栈A
+        self.stack2 = []    # 栈B
+    def push(self, node):
         # write code here
-        if  len(pre)==0 or len(tin)==0:
-            return None
-        root = TreeNode(pre[0])
-        root_index_in_tin = tin.index(root.val)
-        root.left = self.reConstructBinaryTree(pre[1:root_index_in_tin+1],tin[:root_index_in_tin])
-        root.right = self.reConstructBinaryTree(pre[root_index_in_tin+1:],tin[root_index_in_tin+1:])
-        return root
+        self.stack1.append(node)    # 向栈顶添加元素
+    def pop(self):
+        # return xx
+        if len(self.stack2) > 0:
+            return self.stack2.pop()
+        # 将栈A的所有元素pop并push至栈B中，
+        while len(self.stack1)>0: # 或者 while self.stack1
+            self.stack2.append(self.stack1.pop())
+        if len(self.stack2) > 0:
+            return self.stack2.pop()

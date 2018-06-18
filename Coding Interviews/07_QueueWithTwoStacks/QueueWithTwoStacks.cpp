@@ -1,60 +1,46 @@
 /*****************************************
 Copyright: Amusi
 Author:    Amusi
-Date:      2018-06-14
+Date:      2018-06-17
 
 题目描述
-输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。
+用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。
 
 
 *****************************************/
 
-/**
- * Definition for binary tree
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution {
+class Solution
+{
+/* 解题思路
+<分析>：利用两个栈，实现两次进栈出栈即实现一个队列。
+如1,2,3,4,5依次入A栈（此时top为5），出栈并入B栈为：5，4，3，2，1（此时top为1）。此时的B栈即相当于一个队列。
+入队：将元素进栈A
+出队：判断栈B是否为空，如果为空，则将栈A中所有元素pop，并push进栈B，栈B出栈；
+ 如果不为空，栈B直接出栈
+*/
 public:
-    struct TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> in) {
-        // pre: 前序遍历结果
-        // vin: 中序遍历结果
-        // 判断
-        int inlen = in.size();
-        int prelen = pre.size();
-        if (inlen==0 || prelen==0)
-            return NULL;
-        // 初始化
-        TreeNode* root = new TreeNode(pre[0]);
-        // 找到根节点在中序遍历中的位置
-        int root_index_in_tin=0;
-        for(int i=0; i<inlen; ++i){
-            if(in[i] == pre[0]){
-                root_index_in_tin = i;
-                break;
+    void push(int node) {
+        stack1.push(node);
+    }
+
+    int pop() {
+        if(stack2.empty()){
+            // 将stack1中的所有元素pop，并push到stack2中
+            while(!stack1.empty()){
+                temp = stack1.top();
+                stack2.push(temp);
+                stack1.pop();
             }
         }
-        // 创建
-        vector<int> left_pre, right_pre, left_in, right_in;
-        // 左子树
-        for (int i=0; i<root_index_in_tin; ++i){
-            left_in.push_back(in[i]);        // 获得中序排序中的左子树
-            left_pre.push_back(pre[i+1]);    // 获得前序排序中的左子树
-        }
-        // 右子树
-        for (int i=root_index_in_tin+1; i<inlen; ++i){
-            right_in.push_back(in[i]);
-            right_pre.push_back(pre[i]);
-        }
-        // 递归
-        root->left = reConstructBinaryTree(left_pre, left_in);
-        root->right = reConstructBinaryTree(right_pre, right_in);
-        
-        return root;
-        
+        // 取栈2的队头元素
+        temp = stack2.top();
+        stack2.pop();
+        return temp;;
     }
+
+private:
+    // 使用C++ STL: stack
+    int temp;
+    stack<int> stack1;    // 队列元素
+    stack<int> stack2;    // 
 };
