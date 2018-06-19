@@ -22,7 +22,7 @@
 
 - [x] **【面试题08：旋转数组的最小数字】** [MinNumberInRotatedArray](08_MinNumberInRotatedArray)
 
-- [ ] **【面试题09：斐波那契数列】**
+- [x] **【面试题09：斐波那契数列】** [Fibonacci](09_Fibonacci)
 
 - [ ] **【面试题10：二进制中1 的个数】**
 
