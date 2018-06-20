@@ -24,7 +24,7 @@
 
 - [x] **【面试题09：斐波那契数列】** [Fibonacci](09_Fibonacci)
 
-- [ ] **【面试题10：二进制中1 的个数】**
+- [x] **【面试题10：二进制中1 的个数】** [NumberOf1InBinary](10_NumberOf1InBinary)
 
 
 ### **第11-20题**
