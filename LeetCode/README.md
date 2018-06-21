@@ -22,6 +22,8 @@ https://leetcode.com/
 
 （推荐）[LeetCode](https://github.com/kamyu104/LeetCode): Python / C++ 11 Solutions of All LeetCode Questions
 
+[LeetCode](https://github.com/apachecn/LeetCode) : LeetCode 面试题（中文讲解）
+
 [LeetCode](https://github.com/pezy/LeetCode): LeetCode solutions in C++ 11 and Python3
 
 [LeetCode10Py](https://github.com/veroyatnost/LeetCode10Py): 旨在用10行Python代码解决问题
