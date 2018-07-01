@@ -41,9 +41,9 @@
 
 - [x] **【面试题15：链表中倒数第k个结点】** [KthNodeFromEnd](15_KthNodeFromEnd)
 
-- [ ] **【面试题16：反转链表】** [ReverseList](16_ReverseList)
+- [x] **【面试题16：反转链表】** [ReverseList](16_ReverseList)
 
-- [ ] **【面试题17：合并两个排序的链表】**
+- [x] **【面试题17：合并两个排序的链表】** [MergeSortedLists](17_MergeSortedLists)
 
 - [ ] **【面试题18：树的子结构】**
 
