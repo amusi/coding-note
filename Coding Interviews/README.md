@@ -45,7 +45,7 @@
 
 - [x] **【面试题17：合并两个排序的链表】** [MergeSortedLists](17_MergeSortedLists)
 
-- [ ] **【面试题18：树的子结构】**
+- [x] **【面试题18：树的子结构】** [SubstructureInTree](18_SubstructureInTree)
 
 - [ ] **【面试题19：二叉树的镜像】**
 
