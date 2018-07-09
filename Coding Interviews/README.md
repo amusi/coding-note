@@ -49,7 +49,7 @@
 
 - [x] **【面试题19：二叉树的镜像】** [MirrorOfBinaryTree](19_MirrorOfBinaryTree)
 
-- [ ] **【面试题20：顺时针打印矩阵】**
+- [x] **【面试题20：顺时针打印矩阵】** [PrintMatrix](20_PrintMatrix)
 
 
 ### **第21-30题**
