@@ -1,16 +1,20 @@
 # 排序算法
 
 - <a href="#bubblesort">`冒泡排序（Bubble Sort`</a>
-
 - <a href="#selectionsort">`选择排序（Selection Sort`</a>
-
 - 插入排序
-
 - 快速排序
 
-  ​
+
+## 常见排序算法复杂度
 
 ![常用排序算法](http://7xsnb0.com1.z0.glb.clouddn.com/2016-07-15_%E5%B8%B8%E7%94%A8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.png)
+
+
+
+![](https://images2018.cnblogs.com/blog/849589/201804/849589-20180402133438219-1946132192.png)
+
+
 
 
 
@@ -169,6 +173,12 @@ n个记录的直接选择排序可经过n-1趟直接选择排序得到有序结�
 
 **（推荐）**[十大经典排序算法（动图演示）](https://www.cnblogs.com/onepixel/p/7674659.html)
 
-**（推荐）**[常见排序算法C++总结](https://www.cnblogs.com/zyb428/p/5673738.html)
+**（推荐）**[轻松搞定十大排序算法(C++版)](https://blog.csdn.net/opooc/article/details/80994353)
 
-[排序算法总结](http://www.runoob.com/w3cnote/sort-algorithm-summary.html)
+**（推荐）**[从头说12种排序算法：原理、图解、动画视频演示、代码以及笔试面试题目中的应用](https://blog.csdn.net/han_xiaoyang/article/details/12163251)
+
+[常见排序算法C++总结](https://www.cnblogs.com/zyb428/p/5673738.html)
+
+[十大经典排序算法（JavaScript版）](http://web.jobbole.com/87968/)
+
+[八大排序算法总结（JAVA版）](http://www.runoob.com/w3cnote/sort-algorithm-summary.html)
