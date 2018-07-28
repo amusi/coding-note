@@ -34,18 +34,17 @@
 - <a href="#bubblesort">`冒泡排序（Bubble Sort`</a>
 - <a href="#selectionsort">`选择排序（Selection Sort`</a>
 - <a href="#insertionsort">`插入排序（Insertion Sort`</a>
-- 快速排序
+- <a href="#shellsort">`希尔排序（Shell Sort`</a>
+- <a href="#fastsort">`快速排序（Fast Sort`</a>
 
 
 ## 常见排序算法复杂度
 
-![常用排序算法](http://7xsnb0.com1.z0.glb.clouddn.com/2016-07-15_%E5%B8%B8%E7%94%A8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.png)
+![常用排序算法](images/sort_algorithms_2.png)
 
 
 
-![](https://images2018.cnblogs.com/blog/849589/201804/849589-20180402133438219-1946132192.png)
-
-
+![常用排序算法](images/sort_algorithms_2.png)
 
 
 
@@ -70,11 +69,11 @@
 
 **动图演示：**
 
-![img](http://hiphotos.baidu.com/feed/pic/item/024f78f0f736afc3b54b2bfab819ebc4b64512ed.jpg)
+![bubble_sort](images/bubble_sort_1.jpg)
 
 
 
-![](https://images2017.cnblogs.com/blog/849589/201710/849589-20171015223238449-2146169197.gif)
+![bubble_sort](images/bubble_sort.gif)
 
 **过程演示：**待排序数组：{5, 4, 7, 1, 6, 2}，升序排序
 
@@ -162,13 +161,12 @@
 
 **复杂度分析：**
 
-时间复杂度：若给定的数组刚好是排好序的数组，采用改进后的冒泡排序算法，只需循环一次就行了，此时是最优时间复杂度：O(n)，若给定的是倒序，此时是最差时间复杂度：O(n^2) ，因此综合平均时间复杂度为：O(n^2)
-
-空间复杂度：因为每次只需开辟一个temp的空间，因此空间复杂度是：O(1)
+- 时间复杂度：若给定的数组刚好是排好序的数组，采用改进后的冒泡排序算法，只需循环一次就行了，此时是最优时间复杂度：O(n)，若给定的是倒序，此时是最差时间复杂度：O(n^2) ，因此综合平均时间复杂度为：O(n^2)
+- 空间复杂度：因为每次只需开辟一个temp的空间，因此空间复杂度是：O(1)
 
 **代码实现：**
 
-- [bubble_sort.cpp](bubble_sort.cpp)
+- [bubble_sort.cpp](code/bubble_sort.cpp)
 
 ```c++
 /* Summary: 冒泡排序
@@ -253,7 +251,7 @@ int main()
 
 
 
-- [bubble_sort.py](bubble_sort.py)
+- [bubble_sort.py](code/bubble_sort.py)
 
 ```python
 ''' Summary: 冒泡排序
@@ -312,19 +310,21 @@ n个记录的直接选择排序可经过n-1趟直接选择排序得到有序结�
 
 **动图演示**
 
-![selection_sort](https://images2017.cnblogs.com/blog/849589/201710/849589-20171015224719590-1433219824.gif)
+![selection_sort](images/selection_sort.gif)
 
 **复杂度分析**
 
-时间复杂度：O(n2)
+- 时间复杂度：O(n2)
 
-空间复杂度：O(1)
+  注：无论什么数据进去，选择都是O(n2)的时间复杂度，所以若要使用它，建议数据规模越小越好。
 
-无论什么数据进去，选择都是O(n2)的时间复杂度，所以若要使用它，建议数据规模越小越好。
+- 空间复杂度：O(1)
+
+  ​
 
 **代码实现**
 
-- [selection_sort.cpp](selection_sort.cpp)
+- [selection_sort.cpp](code/selection_sort.cpp)
 
 
 ```c++
@@ -384,7 +384,7 @@ int main()
 
 
 
-- [selection_sort.py](selection_sort.py)
+- [selection_sort.py](code/selection_sort.py)
 
 
 ```python
@@ -440,21 +440,21 @@ print("SelectionSort: ", array)
 
 **动图演示**
 
-![插入排序图示](https://images2017.cnblogs.com/blog/849589/201710/849589-20171015225645277-1151100000.gif)
+![插入排序图示](images/insertion_sort.gif)
 
 **复杂度分析**
 
-时间复杂度：最坏O(n2)、平均O(n2)、最差O(n)
+- 时间复杂度：最坏O(n2)、平均O(n2)、最差O(n)
+- 空间复杂度：O(n1)
+- 稳定性：稳定
 
-空间复杂度：O(n1)
+举个例子（暴力手绘图）
 
-举个例子
-
-![Insertion Sort](insertion_sort.png)
+![Insertion Sort](images/insertion_sort.png)
 
 **代码实现**
 
-- [insertion_sort.cpp](insertion_sort.cpp)
+- [insertion_sort.cpp](code/insertion_sort.cpp)
 
 
 ```c++
@@ -509,7 +509,7 @@ int main()
 
 
 
-- [insertion_sort.py](insertion_sort.py)
+- [insertion_sort.py](code/insertion_sort.py)
 
 ```python
 ''' Summary: 插入排序（Insertion Sort）
@@ -549,9 +549,204 @@ print("InsertionnSort: ", array)
 
 
 
+<a id="shellsort"/>
+
+## 希尔排序（Shell Sort）
+
+**基本思想**
+
+- [ ] TODO
+
+
+注：在希尔排序算法提出之前，排序算法的时间复杂度都为O(n^2)，如冒泡排序、选择排序和插入排序。而希尔排序算法是突破这个时间复杂度的第一批算法之一。该复杂度为O(nlogn)，其实直接插入排序算法的改进版。
+
+**步骤**
+
+**动图演示**
+
+![希尔排序](https://images2018.cnblogs.com/blog/849589/201803/849589-20180331170017421-364506073.gif))
+
+**复杂度分析**
+
+
+
+**代码实现**
+
+
+
+<a id="fastsort"/>
+
+## 快速排序（Quick Sort）
+
+**基本思想**
+
+[快速排序（quick sort）](https://en.wikipedia.org/wiki/Quicksort)：通过一趟排序将待排列表分隔成独立的两部分，其中一部分的所有元素均比另一部分的所有元素小，则可分别对这两部分继续重复进行此操作，以达到整个序列有序。（这个过程，我们可以使用递归快速实现）
+
+**步骤**
+
+快速排序使用分治法来把一个串（list）分为两个子串（sub-lists）。具体算法描述如下：
+
+- 从数列中挑出一个元素，称为 “基准”（pivot），这里我们通常都会选择第一个元素作为prvot；
+- 重新排序数列，将比基准值小的所有元素放在基准前面，比基准值大的所有元素放在基准的后面（相同的数可以到任一边）。这样操作完成后，该基准就处于新数列的中间位置，即将数列分成了两部分。这个操作称为分区（partition）操作；
+- 递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数按上述操作进行排序。这里的递归结束的条件是序列的大小为0或1。此时递归结束，排序就完成了。
+
+**动图演示**
+
+![Quick Sort](images/quick_sort.gif)
+
+**复杂度分析**
+
+- 时间复杂度：
+  - 平均情况：O(nlogn)
+  - 最好情况：O(nlong)
+  - 最坏情况：O(n^2)
+    其实不难理解，快排的最坏情况就已经退化为冒泡排序了！所以大家深入理解就会发现各个排序算法是相通的，学习时间久了你就会发现它们的内在联系！是不是很神奇哈～
+- 空间复杂度：
+  - 平均情况：O(logn)
+  - 最好情况：O(logn)
+  - 最坏情况：O(n)
+- 稳定性：不稳定 （由于关键字的比较和交换是跳跃进行的，所以快速排序是一种不稳定的排序方法～）
+
+举个例子（暴力手绘图）
+
+![](images/quick_sort.png)
+
+
+
+**代码实现**
+
+注：下面都是利用递归法实现快速排序。
+
+[quick_sort.cpp](code/quick_sort.cpp)
+
+```c++
+/* Summary: 快速排序（Quick Sort）
+* Author: Amusi
+* Date:   2018-07-28
+*
+* Reference: 
+*   https://en.wikipedia.org/wiki/Quicksort
+*	
+* 快速排序（quick sort）：通过一趟排序将待排列表分隔成独立的两部分，其中一部分的所有元素均比另一部分的所有元素小，则可分别对这两部分继续重复进行此操作，以达到整个序列有序。（这个过程，我们可以使用递归快速实现）
+*
+*/
+
+#include <iostream>
+
+// 快速排序函数（递归法）
+namespace alg{
+	template<typename T>
+	static void QuickSort(T list[], int start, int end)
+	{
+		int i = start;
+		int j = end;
+		// 结束排序（左右两索引值见面，即相等，或者左索引>右索引）
+		if (i >= j)
+			return;
+		// 保存首个数值（以首个数值作为基准）
+		// 这个位置很重要，一定要在if i >= j判断语句之后，否则就索引溢出了
+		T pivot = list[i];
+
+		// 一次排序，i和j的值不断的靠拢，然后最终停止，结束一次排序
+		while (i < j){
+			// 一层循环实现从左边起大于基准的值替换基准的位置，右边起小于基准的值位置替换从左起大于基准值的索引
+			//（从右往左）和最右边的比较，如果 >= pivot, 即满足要求，不需要交换，然后j - 1，慢慢左移，即拿基准值与前一个值比较; 如果值<pivot，那么就交换位置
+			while (i < j && pivot <= list[j])
+				--j;
+			list[i] = list[j];
+			// 交换位置后，（从左往右）然后在和最左边的值开始比较，如果 <= pivot, 然后i + 1，慢慢的和后一个值比较; 如果值>pivot，那么就交换位置
+			while (i < j && pivot >= list[i])
+				++i;
+			list[j] = list[i];
+		}
+		// 列表中索引i的位置为基准值，i左边序列都是小于基准值的，i右边序列都是大于基准值的，当前基准值的索引为i，之后不变
+		list[i] = pivot;
+		// 左边排序
+		QuickSort(list, start, i-1);
+		// 右边排序
+		QuickSort(list, i+1, end);
+	}
+}
+
+using namespace std;
+using namespace alg;
+
+
+int main()
+{
+	int a[8] = { 5, 2, 5, 7, 1, -3, 99, 56 };
+	QuickSort<int>(a, 0, sizeof(a)/sizeof(a[0]) - 1);
+	for (auto e : a)
+		std::cout << e << " ";
+
+	return 0;
+}
+```
+
+
+
+[quick_sort.py](code/quick_sort.py)
+
+```python
+''' Summary: 快速排序（Quick Sort）
+* Author: Amusi
+* Date:   208-07-28
+*
+* Reference: 
+*   https://en.wikipedia.org/wiki/Quicksort
+*   https://www.cnblogs.com/wujingqiao/articles/8961890.html
+*	https://github.com/apachecn/LeetCode/blob/master/src/py3.x/sort/QuickSort.py
+*   快速排序（quick sort）：通过一趟排序将待排列表分隔成独立的两部分，其中一部分的所有元素均比另一部分的所有元素小，则可分别对这两部分继续重复进行此操作，以达到整个序列有序。（这个过程，我们可以使用递归快速实现）
+*
+'''
+
+def QuickSort(array, start, end):
+    lengths = len(array)
+    i = start
+    j = end
+    # 结束排序（左右两索引值见面，即相等，或者左索引>右索引）
+    if i >= j:
+        return	# 返回空即可
+    # 保存首个数值（以首个数值作为基准）
+	# 这个位置很重要，一定要在if i>=j判断语句之后，否则就索引溢出了
+    pivot = array[i]
+    # 一次排序，i和j的值不断的靠拢，然后最终停止，结束一次排序
+    while i < j:
+        # （从右往左）和最右边的比较，如果>=pivot,即满足要求，不需要交换，然后j-1，慢慢左移，即拿基准值与前一个值比较; 如果值<pivot，那么就交换位置
+        while i < j and pivot <= array[j]:
+            # print(pivot, array[j], '*' * 30)
+            j -= 1
+        array[i] = array[j]
+        # 交换位置后，然后在和最左边的值开始比较，如果<=pivot,然后i+1，慢慢的和后一个值比较;如果值>pivot，那么就交换位置
+        while i < j and pivot >= array[i]:
+            # print(pivot, array[i], '*' * 30)
+            i += 1
+        array[j] = array[i]
+    # 列表中索引i的位置为基准值，i左边序列都是小于基准值的，i右边序列都是大于基准值的，当前基准值的索引为i，之后不变
+    array[i] = pivot
+    # 左边排序
+    QuickSort(array, start, i-1)
+    # 右边排序
+    QuickSort(array, i+1, end)
+		
+    #return array
+
+if __name__ == "__main__":
+    array = [1,3,8,5,2,10,7,16,7,4,5]
+    print("Original array: ", array)
+    #array = QuickSort(array, 0, len(array)-1)
+	# 因为python中的list对象是可变对象，所以在函数做"形参"时，是相当于按引用传递
+	# 所以不写成返回值的形式，也是OK的
+    QuickSort(array, 0, len(array)-1)
+    print("QuickSort: ", array)
+
+```
+
+
+
 # 参考
 
-**[1]（推荐）《**大话数据结构》
+**[1]（推荐）**[《大话数据结构》](https://book.douban.com/subject/6424904/)
 
 **[2]（推荐）**[十大经典排序算法（动图演示）](https://www.cnblogs.com/onepixel/p/7674659.html)
 
