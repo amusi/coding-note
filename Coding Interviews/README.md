@@ -58,7 +58,7 @@
 
 - [x] **【面试题21：包含min函数的钱】** [MinInStack](21_MinInStack)
 
-- [ ] **【面试题22：栈的压入、弹出序列】**
+- [x] **【面试题22：栈的压入、弹出序列】** [StackPushPopOrder](22_StackPushPopOrder)
 
 - [ ] **【面试题23：从上往下打印二叉树】**
 
