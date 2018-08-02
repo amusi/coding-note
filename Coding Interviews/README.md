@@ -178,6 +178,8 @@
 
 （C/C++版本）[CodingInterviews](https://github.com/gatieme/CodingInterviews)
 
+[CodingInterviewChinese2](https://github.com/zhedahht/CodingInterviewChinese2)
+
 ### Python
 
 （官方非完整版：Python版本）[coding-interview-python](https://github.com/0xE8551CCB/coding-interview-python)
