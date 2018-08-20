@@ -77,6 +77,21 @@ https://leetcode.com/
 
 
 
+### 其它
+
+|  #   |                  title                   |                    标题                    |                   Code                   | Difficulty |
+| :--: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------: |
+|  1   | [Two Sum](https://leetcode.com/problems/two-sum/description/) | [两数之和](https://leetcode-cn.com/problems/two-sum/description/) | [C++](0001_RTwoSum.cpp) [Python](0001_RTwoSum.py) |  简单（easy）  |
+|      |                                          |                                          |                                          |            |
+|      |                                          |                                          |                                          |            |
+|      |                                          |                                          |                                          |            |
+|      |                                          |                                          |                                          |            |
+|      |                                          |                                          |                                          |            |
+
+
+
+
+
 ## github
 
 ### C/C++
