@@ -81,7 +81,7 @@ https://leetcode.com/
 
 |  #   |                  title                   |                    标题                    |                   Code                   | Difficulty |
 | :--: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------: |
-|  1   | [Two Sum](https://leetcode.com/problems/two-sum/description/) | [两数之和](https://leetcode-cn.com/problems/two-sum/description/) | [C++](0001_RTwoSum.cpp) [Python](0001_RTwoSum.py) |  简单（easy）  |
+|  1   | [Two Sum](https://leetcode.com/problems/two-sum/description/) | [两数之和](https://leetcode-cn.com/problems/two-sum/description/) | [C++](code/0001_TwoSum.cpp) [Python](code/0001_TwoSum.py) |  简单（easy）  |
 |      |                                          |                                          |                                          |            |
 |      |                                          |                                          |                                          |            |
 |      |                                          |                                          |                                          |            |
