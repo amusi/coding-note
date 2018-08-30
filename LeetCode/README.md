@@ -2,7 +2,7 @@
 
 https://leetcode.com/
 
-**（推荐从中文网来刷）**https://leetcode-cn.com/problemset/all/
+**推荐在中文网来刷**：https://leetcode-cn.com/problemset/all/
 
 注：推荐按tag来刷。如链表，二叉树，回溯，深度宽度优先遍历，图，贪心，动规，数组，哈希表……每个tag由easy到hard，每道题先自己思考，不会的参考了一个开源的解答或者参考Discuss或者博客。开始的时候自己独立思考的时间比较长，后来没了耐心，不会的题目就马上看解答了。
 
@@ -15,9 +15,9 @@ https://leetcode.com/
 
 |  #   |                  title                   |                    标题                    |                   Code                   | Difficulty |
 | :--: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------: |
+|  1   | [Two Sum](https://leetcode.com/problems/two-sum/description/) | [两数之和](https://leetcode-cn.com/problems/two-sum/description/) | [C++](code/0001_TwoSum.cpp) [Python](code/0001_TwoSum.py) |  简单（easy）  |
+|  4   | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/description/) | [两个排序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/description/) | [C++](code/0004_.MedianofTwoSortedArrays.cpp) Python |  困难（hard）  |
 |  26  | [Remove Duplicates from Sorted Array](https://oj.leetcode.com/problems/remove-duplicates-from-sorted-array/) | [删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/description/) | [C++](code/0026_RemoveDuplicatesFromSortedArray.cpp) [Python](code/0026_RemoveDuplicatesFromSortedArray.py) |  简单（easy）  |
-|      |                                          |                                          |                                          |            |
-|      |                                          |                                          |                                          |            |
 |      |                                          |                                          |                                          |            |
 |      |                                          |                                          |                                          |            |
 |      |                                          |                                          |                                          |            |
