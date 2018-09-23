@@ -42,9 +42,7 @@
 
 ![常用排序算法](images/sort_algorithms_2.png)
 
-
-
-![常用排序算法](images/sort_algorithms_2.png)
+- [8大排序算法稳定性分析](https://www.cnblogs.com/codingmylife/archive/2012/10/21/2732980.html)
 
 
 
@@ -444,7 +442,7 @@ print("SelectionSort: ", array)
 
 **复杂度分析**
 
-- 时间复杂度：最坏O(n2)、平均O(n2)、最差O(n)
+- 时间复杂度：最坏O(n2)、平均O(n2)、最好O(n)
 - 空间复杂度：O(n1)
 - 稳定性：稳定
 
@@ -555,24 +553,172 @@ print("InsertionnSort: ", array)
 
 **基本思想**
 
-- [ ] TODO
+设待排序元素序列有n个元素，首先取一个整数increment（小于n）作为间隔将全部元素分为increment个子序列，所有距离为increment的元素放在同一个子序列中，在每一个子序列中分别实行直接插入。
 
-
-注：在希尔排序算法提出之前，排序算法的时间复杂度都为O(n^2)，如冒泡排序、选择排序和插入排序。而希尔排序算法是突破这个时间复杂度的第一批算法之一。该复杂度为O(nlogn)，其实直接插入排序算法的改进版。
+注：在[希尔排序算法](https://en.wikipedia.org/wiki/Shellsort)提出之前，排序算法的时间复杂度都为O(n^2)，如冒泡排序、选择排序和插入排序。而希尔排序算法是突破这个时间复杂度的第一批算法之一。该复杂度为O(nlogn)，其实直接插入排序算法的改进版，也称为缩小增量排序。**希尔排序是直接插入排序的一种改进，减少了其复制的次数，速度要快很多**。原因是，当n值很大时，数据项每一趟排序需要移动的个数很少，但数据项的距离很长；当n值减小时，每一趟需要移动的数据增多。正是因为这两种情况的结合才使得希尔排序效率比插入排序高很多。
 
 **步骤**
 
+先将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，具体算法描述：
+
+- 选择一个增量序列t1，t2，…，tk
+- 按增量序列个数k，对序列进行k 趟排序；
+- 每趟排序，根据对应的增量ti，将待排序列分割成若干长度为m 的子序列，分别对各子表进行直接插入排序。仅增量因子为1 时，整个序列作为一个表来处理，表长度即为整个序列的长度。
+
+注：增量的初始值一般为序列长度的一半，然后之后每次再自身减半。
+
 **动图演示**
 
-![希尔排序](https://images2018.cnblogs.com/blog/849589/201803/849589-20180331170017421-364506073.gif))
+![希尔排序](images/shell_sort01.gif)
+
+上图是不是很难理解，那么来看看这个！
+
+![](images/shell_sort02.png)
+
+说实话，看了上面两个图，我还是有点不理解，不怕，我又找了下面这幅图像。
+
+简单介绍一下：
+
+对于[592, 401, 874, 141, 348, 72, 911, 887, 820, 283]序列，一共10个元素。
+
+**第一次，设置增量为5=10/2**，所以有5个子序列：[592,72]、[401,911]、[874,887]、[141,820]和[348,283]。然后对每个子序列进行插入排序，结果是[72,592]、[401,911]、[874,887]、[141,820]和[283,348]。注意，这些元素在序列中的位置初始是不变的，只会随着部分子序列间元素的位置变化而变化，比如[592,72]在原来的序列中索引是[0,5]，之后变成了[5,0]；而[401,911]的序列索引是[1,6]，第一次处理后，索引值不变。
+
+总之，第一次处理的结果是将**[592, 401, 874, 141, 348, 72, 911, 887, 820, 283]—> [72, 401, 874, 141, 283, 592, 911, 887, 820, 348]**。
+
+**第二次，设置增量为2=5/2**，所以有2个子序列：[72, 874,  283, 911, 820]和[401, 141, 592, 887, 348]。然后对每个子序列进行插入排序，[72, 874, 283, 911, 820]的结果是[72, 283, 820, 874, 911]，而[401, 141, 292, 887, 348]的结果是[141, 292, 348, 401, 887]。
+
+总之，第二次处理的结果是将 **[72, 401, 874, 141, 283, 592, 911, 887, 820, 348]—>[72, 141, 283, 292, 820, 348, 874, 401, 911, 997]**。
+
+**第三次，设置增量为1=2/2**，所以有1个序列，就是上述生成的序列[72, 141, 283, 292, 820, 348, 874, 401, 911, 997]。然后进行插入排序，其结果为[72, 141, 283, 292, 348, 401, 820, 874, 911, 997]。
+
+总之，第三次处理的结果是将 **[72, 141, 283, 292, 820, 348, 874, 401, 911, 997]—>[72, 141, 283, 292, 348, 401, 820, 874, 911, 997]**。
+
+其实本质上还是利用了插入排序，但这里通过增量作用，相当于添加了预处理，减少插入排序中移动元素的次数，提高了效率。通过"增量"预处理，使得希尔排序算法时间复杂度降低。
+
+![](images/shell_sort03.jpg)
 
 **复杂度分析**
 
+希尔排序的时间复杂度与增量序列的选取有关。
 
+时间复杂度：
+
+- 平均：O(n^1.3)
+- 最差：O(n2)
+- 最好：O(n)
+
+空间复杂度：O(1)
+
+稳定性：不稳定
 
 **代码实现**
 
+[shell_sort.cpp](code/shell_sort.cpp)
 
+```cpp
+/* Summary: 希尔排序（Shell Sort）
+* Author: Amusi
+* Date:   2018-09-23
+*
+* Reference:
+*   https://en.wikipedia.org/wiki/Shellsort
+*   https://www.geeksforgeeks.org/shellsort/
+*   希尔排序（shell sort）：设待排序元素序列有n个元素，首先取一个整数increment（小于n）作为间隔将全部元素分为increment个子序列，所有距离为increment的元素放在同一个子序列中，在每一个子序列中分别实行直接插入。
+*
+*/
+
+#include <iostream>
+
+// 希尔排序函数（基于快速插入排序）
+namespace alg{
+	template<typename T>
+	static void ShellSort(T list[], int n)
+	{
+		// 设置增量：以n/2为初始gap，然后逐渐减小gap（每次缩小为上次gap的一半）
+		for (int gap = n / 2; gap > 0; gap /= 2){
+			// 遍历当前趟，对每个子序列进行插入排序
+			for (int i = gap; i < n; i++){
+				int temp = list[i];
+				int j = 0;
+				// 遍历子序列
+				for (j = i; j >= gap && list[j - gap]>temp; j -= gap)
+					list[j] = list[j - gap];
+
+				list[j] = temp;
+			}
+		}
+	}
+}
+
+using namespace std;
+using namespace alg;
+
+
+int main()
+{
+	int a[8] = { 5, 2, 5, 7, 1, -3, 99, 56 };
+	int n = sizeof(a) / sizeof(a[0]);
+	ShellSort<int>(a, n);
+	for (auto e : a)
+		std::cout << e << " ";
+
+	return 0;
+}
+```
+
+
+
+[shell_sort.py](code/shell_sort.py)
+
+```python
+'''
+* Summary: 希尔排序（Shell Sort）
+* Author: Amusi
+* Date:   2018-09-23
+*
+* Reference:
+*   https://en.wikipedia.org/wiki/Shellsort
+*   https://www.geeksforgeeks.org/shellsort/
+*   希尔排序（shell sort）：设待排序元素序列有n个元素，首先取一个整数increment（小于n）作为间隔将全部元素分为increment个子序列，所有距离为increment的元素放在同一个子序列中，在每一个子序列中分别实行直接插入。
+*
+*
+'''
+
+def ShellSort(array):
+    lengths = len(array)
+    # 初始化gap
+    gap = lengths//2
+    # 减少增量，遍历子序列进行插入排序
+    while(gap > 0):
+        for i in range(gap, lengths):
+            # 
+            temp = array[i]
+            j = i
+            # 子序列插入排序
+            while j>=gap and array[j-gap]>temp:
+                array[j] = array[j-gap]
+                j -= gap
+
+            array[j] = temp
+        
+        gap = gap//2
+		
+    return array
+
+
+array = [1,3,8,5,2,10,7,16,7,4,5]
+print("Original array: ", array)
+array = ShellSort(array)
+print("InsertionnSort: ", array)
+```
+
+
+
+参考：
+
+- [Shell Sort](https://www.geeksforgeeks.org/shellsort/)
+- [理解希尔排序的排序过程](https://blog.csdn.net/weixin_37818081/article/details/79202115)
+- [图解排序算法(二)之希尔排序](https://www.cnblogs.com/chengxiao/p/6104371.html)
 
 <a id="fastsort"/>
 
