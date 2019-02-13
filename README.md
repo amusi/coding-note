@@ -15,9 +15,11 @@
 
 [剑指Offer](https://github.com/amusi/coding-note/tree/master/Coding%20Interviews)
 
-[Leetcode](LeetCode/README.md)
+[LeetCode](LeetCode/README.md)
 
 [GeeksforGeeks](https://www.geeksforgeeks.org/)
+
+LintCode
 
 ## 参考资料
 
