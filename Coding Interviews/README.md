@@ -182,7 +182,9 @@
 
 ### Python
 
-（官方非完整版：Python版本）[coding-interview-python](https://github.com/0xE8551CCB/coding-interview-python)
+[AlgorithmsByPython](https://github.com/Jack-Lee-Hiter/AlgorithmsByPython)
+
+[Python-Offer](https://github.com/JushuangQiao/Python-Offer)
 
 [interactive-coding-challenges](https://github.com/donnemartin/interactive-coding-challenges)
 
