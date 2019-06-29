@@ -10,8 +10,6 @@
 
 - [x] **【面试题03：二维数组中的查找】** [FindInPartiallySortedMatrix](03_FindInPartiallySortedMatrix/README.md)
 
-
-
 - [x] **【面试题04：替换空格】** [ReplaceBlank](04_ReplaceBlank/README.md)
 
 - [x] **【面试题05：从尾到头打印链表】** [PrintListInReversedOrder](05_PrintListInReversedOrder)
@@ -182,11 +180,16 @@
 
 ### Python
 
-[AlgorithmsByPython](https://github.com/Jack-Lee-Hiter/AlgorithmsByPython)
+- [AlgorithmsByPython](https://github.com/Jack-Lee-Hiter/AlgorithmsByPython)
+- [Python-Offer](https://github.com/JushuangQiao/Python-Offer)
 
-[Python-Offer](https://github.com/JushuangQiao/Python-Offer)
+- [interactive-coding-challenges](https://github.com/donnemartin/interactive-coding-challenges)
 
-[interactive-coding-challenges](https://github.com/donnemartin/interactive-coding-challenges)
+**博客：**
+
+- [剑指offer（第2版）刷题 Python版汇总](https://www.cnblogs.com/yanmk/p/9130681.html)
+
+- [剑指 Offer - python 题解](https://codingcat.cn/article/57)
 
 ### JAVA
 
